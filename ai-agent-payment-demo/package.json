@@ -1,0 +1,34 @@
+{
+  "name": "ai-agent-payment-demo",
+  "version": "1.0.0",
+  "description": "Complete AI agent payment demonstration with OpenClaw as AI agent",
+  "main": "src/ai-agent-payment.js",
+  "scripts": {
+    "start": "node scripts/run-demo.js",
+    "interactive": "node scripts/interactive-demo.js",
+    "test": "echo \"Run: npm start or npm run interactive\"",
+    "deploy-contract": "node scripts/deploy-contract.js",
+    "start-services": "node scripts/start-services.js"
+  },
+  "keywords": [
+    "ai-agent",
+    "payment",
+    "openclaw",
+    "eip-712",
+    "smart-contract",
+    "usdc",
+    "blockchain"
+  ],
+  "author": "OpenClaw AI Assistant",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ethers": "^6.10.0",
+    "express": "^4.18.2",
+    "js-yaml": "^4.1.0",
+    "yaml": "^2.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,137 @@
+products:
+- id: ai-api-1000
+  name: AI API Package
+  name_zh: AI API调用包
+  description: 1000次 GPT-4 API calls for text generation, coding, conversation
+  description_zh: 1000次 GPT-4 API 调用，可用于文本生成、代码编写、对话交互
+  category: ai-services
+  price_eth: 0.0005
+  port: 3000
+  features:
+  - Text generation
+  - Code writing
+  - Conversation interaction
+  - Content creation
+  delivery: Instant
+  validity: 30 days
+  data_endpoint: /api/data
+  cart_template: 'AI API调用包 - 1000次调用，价格: 0.0005 ETH'
+- id: data-cleaning-10gb
+  name: Data Cleaning Service
+  name_zh: 数据清洗服务
+  description: Professional data cleaning service for 10GB datasets
+  description_zh: 专业数据清洗服务，处理10GB数据集，包括去重、格式化、标准化
+  category: data-processing
+  port: 3001
+  features:
+  - Data deduplication
+  - Format standardization
+  - Quality checking
+  - Export reports
+  delivery: 24 hours
+  validity: Permanent
+  data_endpoint: /api/data
+  cart_template: '数据清洗服务 - 10GB数据集处理，价格: 0.0010 ETH'
+  price_eth: 0.0010
+- id: gpu-training-24h
+  name: Model Training Time
+  name_zh: 模型训练时间
+  description: 24 hours dedicated GPU training time for AI models
+  description_zh: 24小时专用GPU训练时间，适用于AI模型训练和推理
+  category: compute
+  port: 3002
+  features:
+  - NVIDIA GPU
+  - 24 hours dedicated
+  - Technical support
+  - Model deployment
+  delivery: Scheduled
+  validity: Use within 7 days after booking
+  data_endpoint: /api/data
+  cart_template: '模型训练时间 - 24小时GPU训练，价格: 0.0015 ETH'
+  price_eth: 0.0015
+- id: analysis-report
+  name: Business Analysis Report
+  name_zh: 商业分析报告
+  description: Professional business data analysis report
+  description_zh: 专业的商业数据分析报告，包含市场趋势、竞争分析和建议
+  category: analytics
+  port: 3003
+  features:
+  - Market analysis
+  - Competitive intelligence
+  - Trend forecasting
+  - Strategic recommendations
+  delivery: 48 hours
+  validity: Permanent
+  data_endpoint: /api/data
+  cart_template: '商业分析报告 - 专业市场分析，价格: 0.0020 ETH'
+  price_eth: 0.0020
+- id: monitoring-7d
+  name: System Monitoring Service
+  name_zh: 系统监控服务
+  description: 7 days 24/7 system performance monitoring
+  description_zh: 7天24小时系统性能监控，实时警报和性能报告
+  category: devops
+  port: 3004
+  features:
+  - Real-time monitoring
+  - Performance alerts
+  - Health reports
+  - Fault diagnosis
+  delivery: Instant
+  validity: 7 days
+  data_endpoint: /api/data
+  cart_template: '系统监控服务 - 7天监控，价格: 0.0025 ETH'
+  price_eth: 0.0025
+- id: consulting-1h
+  name: Expert Technical Consulting
+  name_zh: 专家技术咨询
+  description: 1 hour senior technical expert consulting service
+  description_zh: 1小时资深技术专家咨询服务，解决技术难题
+  category: consulting
+  port: 3005
+  features:
+  - Technical consulting
+  - Architecture design
+  - Problem solving
+  - Best practices
+  delivery: Scheduled
+  validity: Use within 7 days after booking
+  data_endpoint: '/api/data'
+  cart_template: '专家技术咨询 - 1小时专家服务，价格: 0.0030 ETH'
+  price_eth: 0.0030
+- id: api-documentation
+  name: API Documentation Generation
+  name_zh: API文档生成
+  description: Automatic RESTful API documentation generation
+  description_zh: 自动生成RESTful API文档，支持OpenAPI/Swagger格式
+  category: development
+  port: 3006
+  features:
+  - OpenAPI generation
+  - Interactive documentation
+  - Code examples
+  - Test cases
+  delivery: 24 hours
+  validity: Permanent
+  data_endpoint: '/api/data'
+  cart_template: 'API文档生成 - 自动生成API文档，价格: 0.0035 ETH'
+  price_eth: 0.0035
+- id: data-backup-1tb
+  name: Data Backup Service
+  name_zh: 数据备份服务
+  description: 1TB enterprise-grade data backup service
+  description_zh: 1TB企业级数据备份服务，自动备份和恢复
+  category: storage
+  port: 3007
+  features:
+  - Automatic backup
+  - Data encryption
+  - Fast recovery
+  - Version management
+  delivery: Instant
+  validity: 30 days
+  data_endpoint: '/api/data'
+  cart_template: '数据备份服务 - 1TB企业级备份，价格: 0.0040 ETH'
+  price_eth: 0.0040

@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OpenClaw internal (not needed for demo)
+.openclaw/
+memory/
+.clawhub/
+
+# Exclude non-demo files
+check-wallet.js
+test-payment-flow.js
+setup-env.sh
+shopping-command.sh
+commands/

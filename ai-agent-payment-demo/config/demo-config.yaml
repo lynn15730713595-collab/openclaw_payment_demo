@@ -1,0 +1,76 @@
+# AI代理支付演示系统配置
+
+# 网络配置（Sepolia测试网）
+network:
+  name: "Sepolia Testnet"
+  chain_id: 11155111
+  rpc_url: "https://sepolia.infura.io/v3/9ef5f8d808404272bd8c467098842208"
+  # 使用ETH支付，不需要USDC地址
+  explorer_url: "https://sepolia.etherscan.io"
+  
+# 代理合约配置（部署后更新）
+proxy_contract:
+  address: "0x0000000000000000000000000000000000000000"  # 部署后替换
+  name: "AI Payment Proxy"
+  version: "1.0.0"
+
+# 用户配置
+user:
+  address: "0xbe0E4364C61E072781C008b8Cd4CdBa49C4b710C"  # 用户地址
+  private_key_env: "USER_PRIVATE_KEY"  # 从环境变量读取
+  
+# AI代理配置
+ai_agent:
+  id: "openclaw-ai-agent-001"
+  address: "0x0000000000000000000000000000000000000000"  # AI代理地址（EOA）
+  name: "OpenClaw AI Assistant"
+
+# 商户配置
+merchant:
+  address: "0x1ef391d266f3BCdF0d9b30660FDc4032B868cDeb"  # 商户收款地址
+  name: "AI Payment Demo Store"
+  
+# 商品API服务配置
+api_services:
+  base_port: 3000
+  count: 8
+  response_format:
+    status_code: 402
+    headers:
+      X-Payment-Required: "true"
+      X-Cart-ID: "{{cart_id}}"           # 购物车ID
+      X-Product-ID: "{{product_id}}"     # 商品ID
+      X-Product-Name: "{{product_name}}" # 商品名称（ASCII）
+      X-Total-Amount: "{{total_amount}}" # 总金额
+      X-Currency: "ETH"                  # 货币（使用ETH）
+      X-Merchant-Address: "{{merchant_address}}" # 收款地址
+      X-Proxy-Contract: "{{proxy_contract}}"     # 代理合约地址
+      X-Session-Required: "true"         # 需要会话
+    body:
+      success: false
+      error: "Payment required"
+      message: "This API requires payment of {{amount}} ETH"
+      cart:
+        cart_id: "{{cart_id}}"
+        product_id: "{{product_id}}"
+        product_name: "{{product_name}}"
+        amount: {{amount}}
+        currency: "ETH"                  # 使用ETH支付
+        merchant_address: "{{merchant_address}}"
+        proxy_contract: "{{proxy_contract}}"
+        requires_session: true
+        session_instructions: "AI需要获取会话授权并调用代理合约"
+
+# 会话配置
+session:
+  expiry_hours: 24
+  single_use: true                       # 单次使用
+  product_bound: true                    # 绑定特定商品
+  
+# 演示设置
+demo:
+  interactive: true
+  step_by_step: true
+  explain_flow: true
+  auto_deploy_contract: false            # 自动部署合约
+  test_mode: false                       # 真实链上支付模式（不是模拟交易）
